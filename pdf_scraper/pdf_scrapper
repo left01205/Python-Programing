@@ -32,7 +32,7 @@ def extract_nptel_data(pdf_path, csv_output):
         data.append([name.strip(), course.strip(), score, assignments, exam, roll_no])
     
     # Convert to DataFrame and save to CSV
-    df = pd.DataFrame(data, columns=["Name", "Course Name", "Candidate Score", "Online Assignments", "Proctored Exam", "Roll No"])
+    df = pd.DataFrame(data, columns=["Name", "Course Name", "Consolidated Score", "Online Assignments", "Proctored Exam", "Roll No"])
     df.to_csv(csv_output, index=False)
     
     print(f"Data extracted and saved to {csv_output}")
